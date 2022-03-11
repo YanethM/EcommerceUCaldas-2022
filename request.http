@@ -1,0 +1,32 @@
+###
+POST http://localhost:3000/api/v1/products/product HTTP/1.1
+Content-Type: application/json
+
+{
+    "product":"Tennis Reebok",
+    "image":"www.reebok.com",
+    "price":170000,
+    "available":{
+        "available_state": true,
+        "stock":10
+    }
+}
+
+###
+GET http://localhost:3000/api/v1/products HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/products/6229fd4491485b4c4636f6b8 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/v1/products/6229fd4491485b4c4636f6b8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "available":{
+        "stock":7
+    }
+}
+
+###
+DELETE http://localhost:3000/api/v1/products/622a04a278deb29588f598ed HTTP/1.1
